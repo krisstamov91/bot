@@ -1,14 +1,15 @@
 {
   "name": "bot",
   "version": "1.0.0",
-  "description": "Puppeteer bot for Render",
+  "description": "My Puppeteer bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Your Name",
+  "author": "krisstamov91",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^22.0.0"
+    "puppeteer": "^22.0.0",
+    "dotenv": "^16.3.1"
   }
 }
