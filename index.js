@@ -1,23 +1,25 @@
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 
 (async () => {
-    const browser = await puppeteer.launch({
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+  // Стартираме браузъра
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
-    const page = await browser.newPage();
+  const page = await browser.newPage();
 
-    const links = [
-        'https://profitshare.bg/l/3685506'
-    ];
+  try {
+    // Пример – отваряме сайта, тук сложи твоята логика
+    await page.goto('https://example.com');
 
-    for (let link of links) {
-        console.log("Отварям:", link);
+    // Можеш да вкараш своя код за бота тук
+    console.log('Bot работи успешно!');
 
-        await page.goto(link, { waitUntil: 'networkidle2' });
-
-        console.log("➡️ Краен линк:", page.url());
-    }
-
+  } catch (err) {
+    console.error('Грешка в бота:', err);
+  } finally {
     await browser.close();
+  }
 })();
