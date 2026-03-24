@@ -1,15 +1,14 @@
 {
   "name": "bot",
   "version": "1.0.0",
-  "description": "My Puppeteer bot for Render",
+  "description": "Puppeteer bot for Render",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npx puppeteer install chrome",
     "start": "node index.js"
   },
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "puppeteer-core": "^22.0.0"
+    "puppeteer": "^22.0.0"
   }
 }
